@@ -114,3 +114,5 @@ CREATE TABLE Recommendations
 	id INT,
 	similarToID INT
 )
+
+-- Note:  The recommendation is a general id so that it can refer to an artist, album, or song and, if usability permits, a playlist
