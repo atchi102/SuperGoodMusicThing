@@ -48,3 +48,23 @@ genre LIKE (SELECT CONCAT('%',search,'%'));
 
 SELECT * FROM Genres WHERE genre LIKE (SELECT CONCAT('%',search,'%'));
 END//
+
+CREATE PROCEDURE getArtistID(IN given CHAR(50))
+BEGIN
+SELECT * FROM Artists WHERE name = given;
+END//
+
+CREATE PROCEDURE getGenreID(IN given CHAR(15))
+BEGIN
+SELECT * FROM Genres WHERE genre = given;
+END//
+
+CREATE PROCEDURE getSongID(IN given CHAR(50))
+BEGIN
+SELECT * FROM Songs WHERE name = given;
+END//
+
+CREATE PROCEDURE getAlbumID(IN given CHAR(50))
+BEGIN
+SELECT * FROM Album WHERE name = given;
+END//
