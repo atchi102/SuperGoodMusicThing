@@ -11,6 +11,15 @@ BEGIN
   END IF;
 END//
 
+
+CREATE PROCEDURE getRecentListens(IN user INT)
+BEGIN
+  IF EXISTS(SELECT * FROM RecentListens WHERE userID = user) THEN
+  SELECT * FROM RecentListens WHERE userID = user;
+  ELSE
+  SELECT * FROM RecentListens WHERE userID = 0;
+  END IF;
+END//
 -- Procedure for inserting a recent listen into the table
 -- All input variables are IDs (if you do not have the id another stored procedure can be launced)
 CREATE PROCEDURE insertRecentListen(IN user INT, IN song INT, IN album INT, IN artist INT, IN genre INT, IN label INT)
