@@ -68,3 +68,21 @@ CREATE PROCEDURE getAlbumID(IN given CHAR(50))
 BEGIN
 SELECT * FROM Album WHERE name = given;
 END//
+
+CREATE PROCEDURE populate()
+BEGIN
+SELECT * FROM Songs;
+END//
+
+CREATE PROCEDURE sortBy(IN given CHAR(15))
+BEGIN
+IF given = 'Song' then
+SELECT * FROM Songs ORDER BY name;
+ELSEIF given = 'Artist' then
+SELECT * FROM Songs ORDER BY artist;
+ELSEIF given = 'Album' then
+SELECT * FROM Songs ORDER BY album;
+ELSEIF given = 'Genre' then
+SELECT * FROM Songs ORDER BY genre;
+END IF;
+END//
