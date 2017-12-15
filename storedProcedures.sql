@@ -32,19 +32,13 @@ CREATE PROCEDURE search(IN search CHAR(50))
 BEGIN
 
 SELECT * FROM Songs WHERE
-name LIKE (SELECT CONCAT('%',search,'%')) OR
-artist LIKE (SELECT CONCAT('%',search,'%')) OR
-album LIKE (SELECT CONCAT('%',search,'%')) OR
-genre LIKE (SELECT CONCAT('%',search,'%'));
+name LIKE (SELECT CONCAT('%',search,'%'));
 
 SELECT * FROM Albums WHERE
-name LIKE (SELECT CONCAT('%',search,'%')) OR
-artist LIKE (SELECT CONCAT('%',search,'%')) OR
-genre LIKE (SELECT CONCAT('%',search,'%'));
+name LIKE (SELECT CONCAT('%',search,'%'));
 
 SELECT * FROM Artists WHERE
-name LIKE (SELECT CONCAT('%',search,'%')) OR
-genre LIKE (SELECT CONCAT('%',search,'%'));
+name LIKE (SELECT CONCAT('%',search,'%'));
 
 SELECT * FROM Genres WHERE genre LIKE (SELECT CONCAT('%',search,'%'));
 END//
