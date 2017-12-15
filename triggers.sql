@@ -1,5 +1,4 @@
 
-
 CREATE TRIGGER ArtistInsertTrigger BEFORE INSERT ON Songs
 FOR EACH ROW
 BEGIN

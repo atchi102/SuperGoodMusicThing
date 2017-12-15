@@ -27,4 +27,21 @@ VALUES
 
 INSERT INTO Songs (name,artist,album,genre)
 VALUES
-("Don't Take The Money","Bleachers","Gone Now","Indie Pop");
+("Be Above It","Tame Impala","Lonerism","Neo Psychedelia"),
+("It Feels Like We Only Go Backwards","Tame Impala","Lonerism","Neo Psychedelia"),
+("Keep On Lying","Tame Impala","Lonerism","Neo Psychedelia"),
+("Let It Happen","Tame Impala","Currents","Neo Psychedelia"),
+("Yes I'm Changing","Tame Impala","Currents","Neo Psychedelia"),
+("Past Life","Tame Impala","Currents","Neo Psychedelia"),
+("List Of People (To Try And Forget About)","Tame Impala",NULL,"Neo Psychedelia");
+
+INSERT INTO Songs (name,artist,album,genre)
+VALUES
+("Golden Thread","Passenger","Flight of the Crow","Indie Folk"),
+("Month Of Sundays","Passenger","Flight of the Crow","Indie Folk"),
+("Things That Stop You Dreaming","Passenger","All the Little Lights","Indie Folk"),
+("Keep On Walking","Passenger","All the Little Lights","Indie Folk"),
+("I Hate","Passenger","All the Little Lights","Indie Folk"),
+("All the Little Lights","Passenger","All the Little Lights","Indie Folk"),
+("Home","Passenger","Young as the Morning Old as the Sea","Indie Folk"),
+("When We Were Young","Passenger","Young as the Morning Old as the Sea","Indie Folk");
