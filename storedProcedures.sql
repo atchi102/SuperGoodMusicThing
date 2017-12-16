@@ -1,4 +1,6 @@
 
+
+Delimiter //
 -- Procedure for user login
 -- givenUsername : the username a user enters, is also what is displayed in the app
 -- store the returned value (userID) to be used for future queries
@@ -80,3 +82,5 @@ ELSEIF given = 'Genre' then
 SELECT * FROM Songs ORDER BY genre;
 END IF;
 END//
+
+Delimiter ;

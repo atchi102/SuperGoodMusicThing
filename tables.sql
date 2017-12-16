@@ -1,3 +1,5 @@
+delimiter ;
+
 CREATE DATABASE AtchisonColeFinal;
 
 USE AtchisonColeFinal;

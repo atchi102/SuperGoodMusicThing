@@ -1,4 +1,6 @@
 
+Delimiter //
+
 CREATE TRIGGER ArtistInsertTrigger BEFORE INSERT ON Songs
 FOR EACH ROW
 BEGIN
@@ -34,3 +36,5 @@ IF(NEW.name IN (SELECT name FROM Songs WHERE name = NEW.name AND artist = NEW.ar
 DELETE FROM Songs WHERE name = NEW.name AND artist = NEW.artist;
 END IF;
 END;//
+
+Delimiter ;
