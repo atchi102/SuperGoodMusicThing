@@ -8,6 +8,9 @@ public class Song
   private String album;
   private String genre;
   private String songKey;
+  private double valence;
+  private double dance;
+  private double access;
 
 
   public Song(int id, String name, String artist, String album, String genre)
@@ -73,7 +76,7 @@ public class Song
 
   public boolean equals(Song s)
   {
-    if id == s.getID() && name.equals(s.getName()) && album.equals(s.getAlbum())
+    if(id == s.getID() && name.equals(s.getName()) && album.equals(s.getAlbum()))
       return true;
 
     return false;
