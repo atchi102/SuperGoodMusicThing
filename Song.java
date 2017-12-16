@@ -10,43 +10,46 @@ public class Song
   private static String songKey;
 
 
-  public Song(int id, String name, String artist, String album, String genre, String songKey)
+  public Song(int id, String name, String artist, String album, String genre)
   {
     this.id = id;
     this.name = name;
     this.artist = artist;
     this.album = album;
     this.genre = genre;
-    this.songKey = genre;
   }
 
-  public getID()
+  public int getID()
   {
     return id;
   }
 
-  public getName()
+  public String getName()
   {
     return name;
   }
 
-  public getArtist()
+  public String getArtist()
   {
     return artist;
   }
 
-  public getAlbum()
+  public String getAlbum()
   {
     return album;
   }
 
-  public getGenre()
+  public String getGenre()
   {
     return genre;
   }
 
-  public getSongkey()
+  public boolean equals(Song s)
   {
-    return songKey;
+    if id == s.getID() && name.equals(s.getName()) && album.equals(s.getAlbum())
+      return true;
+
+    return false;
   }
+
 }

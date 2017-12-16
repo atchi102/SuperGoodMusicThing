@@ -2,6 +2,16 @@ CREATE DATABASE AtchisonColeFinal;
 
 USE AtchisonColeFinal;
 
+DROP TABLE Recommendations;
+DROP TABLE RecentListens;
+DROP TABLE UserLikes;
+DROP TABLE Users;
+DROP TABLE Songs;
+DROP TABLE Albums;
+DROP TABLE Labels;
+DROP TABLE Genres;
+DROP TABLE Artists;
+
 CREATE TABLE Artists
 (
 	id INT AUTO_INCREMENT PRIMARY KEY,
@@ -55,7 +65,9 @@ CREATE TABLE Songs
 	artist CHAR(50) NOT NULL,
 	album CHAR(50),
 	genre CHAR(15),
-	songKey CHAR(15),
+	valence FLOAT,
+	danceabilty FLOAT,
+	accessibilty FLOAT,
   FOREIGN KEY (artist) REFERENCES Artists(name)
   ON DELETE CASCADE
   ON UPDATE CASCADE
