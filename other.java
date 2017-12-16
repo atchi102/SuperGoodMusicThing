@@ -6,10 +6,22 @@ public class other{
 
   public static void main(String[] args)
   {
+    //Song t = new Song("It Feels Like We Only Go Backwards","Tame Impala","Lonerism","Neo Psychedelia",3,4,5);
+
   }
 
-  public static Song getRecommendation(ArrayList<Song> Songs, Song compareTo)
+  public static Song getRecommendation(ArrayList<Song> Songs, String compareToName)
   {
+    Song compareTo = null;
+    for(Song s : Songs)
+    {
+      if(s.getName().equals(compareToName))
+      {
+        compareTo = s;
+        break;
+      }
+    }
+
     double result = 100;
     double temp;
     Song song = null;
