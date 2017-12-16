@@ -2,12 +2,12 @@
 
 public class Song
 {
-  private static int id;
-  private static String name;
-  private static String artist;
-  private static String album;
-  private static String genre;
-  private static String songKey;
+  private int id;
+  private String name;
+  private String artist;
+  private String album;
+  private String genre;
+  private String songKey;
 
 
   public Song(int id, String name, String artist, String album, String genre)
@@ -17,6 +17,18 @@ public class Song
     this.artist = artist;
     this.album = album;
     this.genre = genre;
+  }
+
+  public Song(int id, String name, String artist, String album, String genre, double valence, double dance, double access)
+  {
+    this.id = id;
+    this.name = name;
+    this.artist = artist;
+    this.album = album;
+    this.genre = genre;
+    this.valence = valence;
+    this.dance = dance;
+    this.access = access;
   }
 
   public int getID()
@@ -42,6 +54,21 @@ public class Song
   public String getGenre()
   {
     return genre;
+  }
+
+  public double getValence()
+  {
+    return valence;
+  }
+
+  public double getDanceability()
+  {
+    return dance;
+  }
+
+  public double getAccessibility()
+  {
+    return access;
   }
 
   public boolean equals(Song s)
