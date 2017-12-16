@@ -8,6 +8,10 @@ triggers.SQL
 storedProcedures.SQL
 insertValues.sql
 
+Run this command in mysql:
+
+GRANT ALL PRIVILEGES ON AtchisonColeFinal.* TO 'cpsc408'@'localhost' IDENTIFIED BY 'FY17cpsc408' WITH GRANT OPTION;
+
 Compile these files:
 Song.java
 DBHandler.java
